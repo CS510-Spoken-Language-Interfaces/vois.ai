@@ -1,15 +1,39 @@
 {% extends 'generic_screen.html' %}
 {% block body %}
-	<p>Start recording by saying "START RECORDING" or by pressing the button below.	</p>
+	<p id="headr">Start recording by saying <br/>"START RECORDING" <br/>or by pressing the button below.	</p>
 	<div class="gn"><div class="mc"></div></div>
-	<button style="height:50px;width:200px;background:#D45C21;text-align:center;font-weight:bold;color:#ffff;font-size:20px">START RECORDING</button>
+
+	<div class="bt1"><button  class ="btn" style="">START RECORDING</button><btn>
+
 	<style>
+ .btn {
+    height:50px;
+    width:300px;
+    background:#D45C21;
+    text-align:center;
+    font-weight:bold;
+    color:#ffff;
+    font-size:20px;
+    margin:0 auto;
+ }
+.bt1 {
+  text-align: center;
+}
+  #headr {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%; 
+    text-align:center;
+    width:450px;
+    font-size: 20px;
+  }
+
 	.gn{
   position:relative;
   margin: 5% auto;
-  background-color:#FE2222;
+  background-color:#C7C7C7;
   border-radius:50%;
-  width:10em; height:10em;
+  width:20em; height:20em;
 }
 :before, :after{
   content:'';
@@ -48,4 +72,5 @@
   width:20%; height:25%;
 }
 	</style>
+ <script src="app.js"></script> 
 {% endblock %}
