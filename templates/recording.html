@@ -1,24 +1,29 @@
 {% extends 'generic_screen.html' %}
 {% block body %}
-	<p id="headr">Start recording by saying <br/>"START RECORDING" <br/>or by pressing the button below.	</p>
+	<p id="headr">Start recording by pressiong the <br/>"START RECORDING" <br/> button.</p>
 	<div class="gn"><div class="mc"></div></div>
-
-	<div class="bt1"><button  class ="btn" onclick="CBtn()">START RECORDING</button><btn>
-
+  
+	<div class="bt1">
+    <button  id="record" class ="btn">START RECORDING</button><btn>
+    <button  id="stop" class ="btn"  >STOP RECORDING</button><btn>  
+  </div>
+  
 	<style>
  .btn {
     height:50px;
-    width:300px;
+    width:250px;
     background:#D45C21;
     text-align:center;
     font-weight:bold;
     color:#ffff;
     font-size:20px;
-    margin:0 auto;
+    margin:5px;
+    margin-left: 40px;
+    margin-right: 40px;
  }
-.bt1 {
+ .bt1{
   text-align: center;
-}
+ }
   #headr {
     margin-left:auto;
     margin-right:auto;
@@ -74,3 +79,5 @@
 	</style>
 
 {% endblock %}
+
+

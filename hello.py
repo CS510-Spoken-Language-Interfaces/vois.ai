@@ -17,6 +17,11 @@ def display():
 def record():
     return render_template('recording.html')
 
+@app.route('/vois.ai/analyze/')
+def analyze():
+    return render_template('analyze.html')
+    
+
 
 if __name__ == '__main__':
 	app.run(debug=True)

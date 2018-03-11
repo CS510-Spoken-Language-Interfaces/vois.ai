@@ -3,7 +3,7 @@
 <head>
   <title>Vois.ai</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="{{ url_for('static', filename='app.js') }}"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<style>
 		.content{
 		position: relative;	
@@ -13,8 +13,8 @@
     background:#F8F9FA		
 		}
 	</style>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+	
+		
 </head>
 <body>
 <div class="content">	
@@ -22,5 +22,7 @@
 {% block body %}{% endblock %}	
 </div>
 		
+<script type="text/javascript" src="{{ url_for('static', filename='mediaDevices-getUserMedia-polyfill.js') }}"></script>	
+		<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>		
 </body>
 </html>
