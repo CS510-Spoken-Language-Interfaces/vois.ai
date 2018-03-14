@@ -1,4 +1,5 @@
-from flask import Flask,render_template
+import os
+from flask import Flask,render_template, request,json
 
 app = Flask("__name__")
 
@@ -17,11 +18,12 @@ def display():
 def record():
     return render_template('recording.html')
 
-@app.route('/vois.ai/analyze/')
+@app.route('/vois.ai/analyze/', methods=['POST'])
 def analyze():
-    return render_template('analyze.html')
+	if request.method == 'POST':
+		result = request.form['sp_area']
+	return json.dumps({'status':'OK','result':result});
     
-
 
 if __name__ == '__main__':
 	app.run(debug=True)
